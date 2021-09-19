@@ -3,11 +3,12 @@ import { Container } from "./style";
 import IncomeImg from "../../assets/income.svg"
 import Outcome from "../../assets/outcome.svg"
 import Total from "../../assets/total.svg"
-import { TransactionsContext } from "../../TransectionsContext";
+import { useTransections } from '../../hooks/useTransections';
+
 
 
 export function Summary(){
-    const {transitions} = useContext(TransactionsContext)
+    const {transitions} = useTransections()
 
     
 

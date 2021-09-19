@@ -3,7 +3,7 @@ import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header";
 import { GlobalStyle } from "./styles/global";
 import {NewTransactionModal}  from "./components/NewTransactionModal";
-import { TransactionProvider } from "./TransectionsContext";
+import { TransactionProvider } from "./hooks/useTransections";
 
 
 export function App() {

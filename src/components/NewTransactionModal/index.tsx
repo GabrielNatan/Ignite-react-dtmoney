@@ -6,7 +6,7 @@ import outcome from "../../assets/outcome.svg"
 import { Container,TransactionTypeContainer } from "./styles"
 
 import {api} from "../../services/api"
-import { TransactionsContext } from "../../TransectionsContext";
+import { useTransections } from "../../hooks/useTransections";
 
 Modal.setAppElement('#root');
 
@@ -20,7 +20,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: ModalInstance) {
     const [category,setCategory] = useState('')
     const [type,setType] = useState('deposit')
 
-    const {createTransaction} = useContext(TransactionsContext)
+    const {createTransaction} = useTransections()
 
 
     async function handleSubmitForm(event: FormEvent){
